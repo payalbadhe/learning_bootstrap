@@ -9,13 +9,80 @@
       rel="stylesheet"
       integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
       crossorigin="anonymous">
+      <style>
+        .coffee-menu{
+    background:#6c757d;
+    padding:60px 0;
+}
+
+.coffee-card{
+    border:none;
+    border-radius:15px;
+    overflow:hidden;
+    transition:.5s;
+    cursor:pointer;
+}
+
+.coffee-card img{
+    height:220px;
+    object-fit:cover;
+    transition:.5s;
+}
+
+.coffee-card:hover{
+    transform:translateY(-12px);
+    box-shadow:0 15px 35px rgba(0,0,0,.35);
+}
+
+.coffee-card:hover img{
+    transform:scale(1.1);
+}
+
+.coffee-card .card-body{
+    transition:.4s;
+}
+
+.coffee-card:hover .card-body{
+    background:#f8f4ef;
+}
+
+.coffee-card h4{
+    font-weight:bold;
+    transition:.3s;
+}
+
+.coffee-card:hover h4{
+    color:#6F4E37;
+}
+
+.btn-primary{
+    background:#6F4E37;
+    border:none;
+}
+
+.btn-primary:hover{
+    background:#3E2723;
+    transform:scale(1.05);
+}
+
+.price{
+    margin-top:15px;
+    font-size:40px;
+    font-weight:bold;
+    color:#000;
+}
+
+.coffee-card:hover .price{
+    color:#6F4E37;
+}
+      </style>
   </head>
   <body>
     <header>
       <nav class="navbar navbar-expand-lg bg-primary" data-bs-theme="dark">
         <div class="container-fluid">
           <a class="navbar-brand" href="#">Coffe Shop <img
-              src="images/coffe.jpg" alt="Coffee" width="30" height="24"></a>
+              src="images/coffee.jpeg" alt="Coffee" width="30" height="24"></a>
           <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
             data-bs-target="#navbarSupportedContent"
             aria-controls="navbarSupportedContent" aria-expanded="false"
@@ -63,77 +130,138 @@
       </nav>
     </header>
     <main>
-      <!--section start -->
-        <section class="mt-5 bg-secondary">
-          <div class="container pb-4">
-            <div class="row">
-              <h1 class="text-white p-4">Our Product</h1>
-              <div class="col-md-3"><div class="card">
-                  <img src="images/cappu.jpg" class="card-img-top" alt="bird">
-                  <div class="card-body">
-                    <h5 class="card-title">cappuccino</h5>
-                    <p class="card-text">Some quick example text to build on the
-                      card title and make up the bulk of the card’s content.</p>
-                    <a href="#" class="btn btn-primary">Add To Card</a>
-                    <h1>Rs.500</h1>
-                  </div>
-                </div></div>
-              <div class="col-md-3"><div class="card">
-                  <img src="images/caramel.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Caramel</h5>
-                    <p class="card-text">Some quick example text to build on the
-                      card title and make up the bulk of the card’s content.</p>
-                    <a href="#" class="btn btn-primary">Go somewhere</a>
-                    <h1>Rs.700</h1>
-                  </div>
-                </div></div>
-              <div class="col-md-3"><div class="card">
-                  <img src="images/caml2.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Affogato</h5>
-                    <p class="card-text">Some quick example text to build on the
-                      card title and make up the bulk of the card’s content.</p>
-                    <a href="#" class="btn btn-primary">Add To Card</a>
-                    <h1>Rs.800</h1>
-                  </div>
-                </div></div>
-              <div class="col-md-3"><div class="card">
-                  <img src="images/cappu.jpg" class="card-img-top" alt="...">
-                  <div class="card-body">
-                    <h5 class="card-title">Irish</h5>
-                    <p class="card-text">Some quick example text to build on the
-                      card title and make up the bulk of the card’s content.</p>
-                    <a href="#" class="btn btn-primary">Add To Card</a>
-                    <h1>Rs.800</h1>
-                  </div>
-                </div></div>
+      <section class="coffee-menu py-5">
+    <div class="container">
+        <h2 class="text-center mb-5">Our Coffee Menu</h2>
 
+        <div class="row g-4">
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card coffee-card">
+                    <img src="images/cappu.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h4>Cappuccino</h4>
+                        <p>Rich espresso with steamed milk and creamy foam.</p>
+                        <a href="#" class="btn btn-primary">Add To Cart</a>
+                        <h2 class="price">Rs.500</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card coffee-card">
+                    <img src="images/caramel.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h4>Caramel</h4>
+                        <p>Sweet caramel blended with fresh coffee and milk.</p>
+                        <a href="#" class="btn btn-primary">Add To Cart</a>
+                        <h2 class="price">Rs.700</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card coffee-card">
+                    <img src="images/irish3.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h4>Affogato</h4>
+                        <p>Vanilla ice cream topped with hot espresso.</p>
+                        <a href="#" class="btn btn-primary">Add To Cart</a>
+                        <h2 class="price">Rs.800</h2>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6">
+                <div class="card coffee-card">
+                    <img src="images/iri.jpg" class="card-img-top" alt="">
+                    <div class="card-body">
+                        <h4>Irish</h4>
+                        <p>Fresh brewed coffee with smooth creamy flavour.</p>
+                        <a href="#" class="btn btn-primary">Add To Cart</a>
+                        <h2 class="price">Rs.400</h2>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+        <!--section end -->
+    </main>
+     <!-- footer start -->
+        <footer class="footer-theme mt-5 bg-secondary">
+          <div class="container py-5">
+            <div class="row g-4">
+              <!-- About -->
+              <div class="col-md-3">
+                <h3>About Us</h3>
+                <p>
+                  coffee shop provides delicious coffee and food
+                  with fresh ingredients and homemade taste.
+                  We create happy moments with every meal.
+                </p>
+              </div>
+
+              <!-- Product Overview -->
+
+              <div class="col-md-3">
+                <h3>
+                  Our Products
+                </h3>
+                <ul class="list-unstyled">
+                  <li>🍕 Pizza</li>
+                  <li>🍔 Burger</li>
+                  <li>☕ Coffee</li>
+                  <li>🍰 Cake</li>
+                  <li>🍹 Mocktail</li>
+                </ul>
+              </div>
+
+              <!-- Contact -->
+
+              <div class="col-md-3">
+                <h3>
+                  Contact Us
+                </h3>
+                <p>
+                  📍 Coffee Shop
+                </p>
+                <p>
+                  📞 +91 8788776321
+                </p>
+                <p>
+                  ✉ coffeeshop@gmail.com
+                </p>
+              </div>
+
+              <!-- Online Links -->
+
+              <div class="col-md-3">
+                <h3 class="text-black">
+                  Follow Us
+                </h3>
+                <a href="#" class="btn btn-outline-light m-1">
+                  Instagram
+                </a>
+                <a href="#" class="btn btn-outline-light m-1">
+                  Facebook
+                </a>
+                <a href="#" class="btn btn-outline-light m-1">
+                  WhatsApp
+                </a>
+              </div>
+            </div>
+            <hr>
+            <div class="text-center">
+              <p>
+                © 2026 coffee Shop | All Rights Reserved
+              </p>
             </div>
           </div>
+        </footer>
+        <!-- footer end -->
 
-        </section>
-        <!--section end -->
-        <section>
-        <div class="modal" tabindex="-1">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h5 class="modal-title">Modal title</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-        <p>Modal body text goes here.</p>
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-</section>
-    </main>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
